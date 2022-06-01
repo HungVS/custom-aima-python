@@ -1,5 +1,7 @@
 import os
 import importlib
+import inspect
+from csp import NQueensCSP
 
 from utils import Symbol
 
@@ -33,5 +35,34 @@ class Marker:
             prob_score+=0.5 if sd['A1']==list(range(1,10)) else 0 
             s=prob_mod.s 
             prob_score+=0.5 if s.op=='==>' and s.args[1]==Symbol('C') else 0
+            
+        elif prob_id==3:
+            distances=prob_mod.distances
+            prob_score+=0.5 if sorted(prob_mod.all_cities)==['Bacgiang', 'Dienbien', 'Hanoi', 'Laocai', 'Namdinh', 'Nghean'] else 0
+            prob_score+=0.5 if round(distances["Hanoi"]["Dienbien"])==round(161.55494421403512) and round(distances["Namdinh"]["Bacgiang"])==round(130.38404810405297) else 0
+            
+        elif prob_id==4:
+            initial=prob_mod.initial
+            min_conflicts=prob_mod.min_conflicts
+            eight_queens=prob_mod.eight_queens 
+            
+            prob_score+=0.5 if sorted(initial.values())==[0, 1, 2, 2, 3, 4, 5, 6] else 0
+           
+            ts_score=0 
+            sol=min_conflicts(eight_queens,initial)
+            
+            ts_score+=1 if len(eight_queens.conflicted_vars(sol))==0 else 0
+            
+            src=inspect.getsource(min_conflicts)
+            ts_score+=1 if src.count("min_conflicts_value") == 1 else 0
+                
+            re_sol=None
+            for i in range(5):
+                eight_queens=NQueensCSP(8)
+                re_sol=min_conflicts(eight_queens,initial)
+           
+            ts_score+= re_sol!=sol 
+            
+            prob_score+=0.5 if ts_score==3 else 0
             
         prob_rpt.update_score(prob_score)
