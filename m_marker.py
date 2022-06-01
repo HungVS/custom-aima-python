@@ -116,8 +116,8 @@ class Marker:
             prob_score+=0.5 if sorted(prob_mod.all_cities)==['Bacgiang', 'Dienbien', 'Hanoi', 'LaoCai', 'Namdinh', 'Nghean'] else 0
             prob_score+=0.5 if round(distances["Hanoi"]["Dienbien"])==round(161.55494421403512) and round(distances["Namdinh"]["Bacgiang"])==round(130.38404810405297) else 0
             src=inspect.getsource(prob_mod)
-            if src.count("TSP_problem") == 1 or src.replace(" ", "").count("(50,250)") or src.replace(" ", "").count("(320,280)"):
-                print(f"[CANH BAO]: PHAT HIEN BAN 'GIAN LAN', DA THUC HIEN 'DANH DAU BAI' TU DONG")
+            if src.count("TSP_problem") == 1 or src.replace(" ", "").count("(50,250)")==1 or src.replace(" ", "").count("(320,280)")==1:
+                print(f"[CANH BAO]: PHAT HIEN 'GIAN LAN', DA THUC HIEN 'DANH DAU BAI' TU DONG.\nCAN TU GIAC THONG BAO TA DE DUOC 'KHOAN HONG'")
             
         elif prob_id==4:
             initial=prob_mod.initial
