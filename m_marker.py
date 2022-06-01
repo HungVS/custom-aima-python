@@ -20,44 +20,44 @@ class Marker:
             c_id="I - PYTHON CO BAN"
             try:
                 res=isinstance(prob_mod.a,float)
-                prob_score+=0.5 if is_true(res)  else 0
+                prob_score+=0.5 if is_true(res) else 0
             except:
                 log_noti(c_id, 'a')
             try:
                 res=prob_mod.b[1]=='7' 
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'b')
             try:
                 res=prob_mod.c=="Hello, World!" 
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'c')
             try:
                 res=prob_mod.d(24,7)==24*7
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'd')
             try:
                 res=prob_mod.e.get_name() == "Hello, World!"
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'e')
             try: 
                 res=prob_mod.f["name"]=="Hello, World!"  and prob_mod.f["score"]==10
-                prob_score+=0.5 if res  else 0
+                prob_score+=0.5 if is_true(res) else 0
             except:
                 log_noti(c_id, 'f')
             try:
                 res=prob_mod.g(["Hello, ", "World", "!"])=="Hello, World!"
-                prob_score+=0.5 if res  else 0
+                prob_score+=0.5 if is_true(res) else 0
             except:
                 log_noti(c_id, 'g')
             try:
                 H=prob_mod.H
                 h=H(10, "...", 22)
                 res=h.get_infor()==[h._id,h._name,h._age]
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'h')
         
@@ -66,40 +66,40 @@ class Marker:
             program=prob_mod.program
             try:
                 res=program("green") == "go" and program("red") == "stop" and program("yellow") == "processing"
-                prob_score+=0.5 if  res else 0
+                prob_score+=0.5 if  is_true(res)else 0
             except:
                 log_noti(c_id, 'a')
             try:
                 res=prob_mod.node.state=="Hanoi"
-                prob_score+=0.5 if res  else 0
+                prob_score+=0.5 if is_true(res) else 0
             except:
                 log_noti(c_id, 'b')
             try:
                 res=round(prob_mod.sld((11.1,12.2),(24.7,30.2)))==23
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'c')
             try:
                 res=round(prob_mod.T)==18 
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'd')
             try:
                 sd=prob_mod.sd
                 res=sd['A1']==list(range(1,10))
-                prob_score+=0.5 if res else 0 
+                prob_score+=0.5 if is_true(res)else 0 
             except:
                 log_noti(c_id, 'e')
             try:
                 csp=prob_mod.csp
                 res=sorted(csp.variables)==['Hanam', 'Hanoi', 'Hungyen'] and csp.domains["..."]== ['R', 'G', 'B']
-                prob_score+=0.5 if res else 0
+                prob_score+=0.5 if is_true(res)else 0
             except:
                 log_noti(c_id, 'f')
             try: 
                 s=prob_mod.s 
                 res=s.op=='==>' and s.args[1]==Symbol('C')
-                prob_score+=0.5 if res  else 0
+                prob_score+=0.5 if is_true(res) else 0
             except:
                 log_noti(c_id, 'g')    
             
