@@ -17,9 +17,10 @@ def isolate(f,x,y):
         f(x,y)
         return SUCCESS
     except ModuleNotFoundError:
+        logging.exception("")
         print("[ERROR]: Loi 'Module not found' - Can thong bao cho TA")
     except:
-        logging.exception("Problem error")
+        logging.exception("")
         return ERROR
 
 def match_dicts(d1,d2):
@@ -32,7 +33,7 @@ def log_noti(c_id, q_id):
     # print("================================================") 
     # logging.exception("")
     print(f"[CHU Y]: 'Chua' lam hoac lam 'sai' cau {q_id} - Phan {c_id}")
-    # print("================================================")
+    # print("====================================ư============")
 
 def is_true(x):
     if not x:
