@@ -1,7 +1,5 @@
 '''
 PHẦN II: AI CƠ BẢN.
-- 8 câu.
-- 0.5 điểm/câu.
 '''
 
 '''a) Implement program dưới đây.'''
