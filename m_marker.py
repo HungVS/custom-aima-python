@@ -118,6 +118,7 @@ class Marker:
             src=inspect.getsource(prob_mod)
             if src.count("TSP_problem") == 1 or src.replace(" ", "").count("(50,250)")==1 or src.replace(" ", "").count("(320,280)")==1:
                 print(f"[CANH BAO]: PHAT HIEN 'GIAN LAN', DA THUC HIEN 'DANH DAU BAI' TU DONG.\nCAN TU GIAC THONG BAO TA DE DUOC 'KHOAN HONG'")
+                prob_score=0
             
         elif prob_id==4:
             initial=prob_mod.initial
