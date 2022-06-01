@@ -29,7 +29,7 @@ def match_dicts(d1,d2):
         return False
     
 def log_noti(c_id, q_id):
-    print("================================================") 
-    logging.exception("")
+    # print("================================================") 
+    # logging.exception("")
     print(f"[CHU Y]: 'Chua' lam hoac lam 'sai' cau {q_id} - Phan {c_id}")
-    print("================================================") 
+    # print("================================================") 
