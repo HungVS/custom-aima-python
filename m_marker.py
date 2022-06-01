@@ -142,7 +142,7 @@ class Marker:
                 ts_score+=1 if src.count("min_conflicts_value") == 1 else 0
                 prob_score+=0.5 if ts_score==2 else 0
             except:
-                print(f"[CHU Y]: CH UA LAM HOAC CHUA LAM DUNG YEU CAU DE BAI")
+                print(f"[CHU Y]: CHUA LAM HOAC CHUA LAM DUNG YEU CAU DE BAI")
             # re_sol=None
             # for i in range(10):
             #     eight_queens=NQueensCSP(8)
