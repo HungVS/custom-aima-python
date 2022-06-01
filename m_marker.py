@@ -113,8 +113,8 @@ class Marker:
             
         elif prob_id==3:
             distances=prob_mod.distances
-            prob_score+=0.5 if sorted(prob_mod.all_cities)==['Bacgiang', 'Dienbien', 'Hanoi', 'Laocai', 'Namdinh', 'Nghean'] else 0
-            prob_score+=0.5 if round(distances["Hanoi"]["Dienbien"])==round(161.55494421403512) and round(distances["Namdinh"]["Bacgiang"])==round(130.38404810405297) else 0
+            prob_score+=0.5 if sorted(prob_mod.all_cities)==['Bacgiang', 'DienBien', 'Hanoi', 'Laocai', 'Namdinh', 'Nghean'] else 0
+            prob_score+=0.5 if round(distances["Hanoi"]["DienBien"])==round(161.55494421403512) and round(distances["Namdinh"]["Bacgiang"])==round(130.38404810405297) else 0
             
         elif prob_id==4:
             initial=prob_mod.initial
