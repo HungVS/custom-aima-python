@@ -50,7 +50,8 @@ f) Tạo đối tượng f thuộc kiểu Dict chứa các cặp (key,value) sau
 
 '''
 h) Tạo class H có:
- - Thuộc tính _id: int, _name: str, _age: int
+ - Thuộc tính _id: int, _name: str, _age: int.
+ - Các thuộc tính được khởi tạo thông qua hàm constructor (hay __init__).
  - Phương thức get_infor trả về list chứa LẦN LƯỢT các giá trị _id, _name, _age.
  
 VD: 
