@@ -138,6 +138,7 @@ class Marker:
                 
                 src=inspect.getsource(min_conflicts)
                 ts_score+=1 if src.count("min_conflicts_value") == 1 else 0
+                prob_score+=0.5 if ts_score==2 else 0
             except:
                 print(f"[CHU Y]: CHUA LAM HOAC CHUA LAM DUNG YEU CAU DE BAI")
             # re_sol=None
@@ -147,6 +148,5 @@ class Marker:
            
             # ts_score+= re_sol!=sol 
             
-            prob_score+=0.5 if ts_score==2 else 0
             
         prob_rpt.update_score(prob_score)
