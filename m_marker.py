@@ -124,20 +124,22 @@ class Marker:
                 prob_score=0
             
         elif prob_id==4:
-            initial=prob_mod.initial
-            min_conflicts=prob_mod.min_conflicts
-            eight_queens=prob_mod.eight_queens 
+            try:
+                initial=prob_mod.initial
+                min_conflicts=prob_mod.min_conflicts
+                eight_queens=prob_mod.eight_queens 
             
-            prob_score+=0.5 if sorted(initial.values())==[0, 1, 2, 2, 3, 4, 5, 6] else 0
-           
-            ts_score=0 
-            sol=min_conflicts(eight_queens,initial)
+                prob_score+=0.5 if sorted(initial.values())==[0, 1, 2, 2, 3, 4, 5, 6] else 0
             
-            ts_score+=1 if len(eight_queens.conflicted_vars(sol))==0 else 0
-            
-            src=inspect.getsource(min_conflicts)
-            ts_score+=1 if src.count("min_conflicts_value") == 1 else 0
+                ts_score=0 
+                sol=min_conflicts(eight_queens,initial)
                 
+                ts_score+=1 if len(eight_queens.conflicted_vars(sol))==0 else 0
+                
+                src=inspect.getsource(min_conflicts)
+                ts_score+=1 if src.count("min_conflicts_value") == 1 else 0
+            except:
+                print(f"[CHU Y]: CHUA LAM HOAC CHUA LAM DUNG YEU CAU DE BAI")
             # re_sol=None
             # for i in range(10):
             #     eight_queens=NQueensCSP(8)
