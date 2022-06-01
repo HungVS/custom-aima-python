@@ -49,7 +49,7 @@ class Marker:
             try:
                 H=prob_mod.H
                 h=H(10, "...", 22)
-                prob_score+=0.5 if h.get_infor()==[10,"...",22] else 0
+                prob_score+=0.5 if h.get_infor()==[h._id,h._name,h._age] else 0
             except:
                 log_noti(c_id, 'h')
         
