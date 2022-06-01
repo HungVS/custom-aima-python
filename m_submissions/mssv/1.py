@@ -7,12 +7,8 @@ PHẦN I: PYTHON CƠ BẢN.
 
 '''a) Khởi tạo biến a có GIÁ TRỊ TÙY Ý thuộc kiểu float.'''
 
-
-
-
-'''b) Khởi tạo biến b thuộc kiểu List chứa LẦN LƯỢT các phần tử sau: 24, '7', 99.0.'''
-
-
+'''b) Khởi tạo biến b thuộc kiểu List chứa LẦN LƯỢT các phần tử sau: 24, '7', 99.0
+'''
 
 
 '''c) Khởi tạo biến c thuộc kiểu str có nội dung được NỐI từ c0 và c1.'''
@@ -47,7 +43,7 @@ f) Tạo đối tượng f thuộc kiểu Dict chứa các cặp (key,value) sau
 
 
 
-'''g) Tạo function g nhận một list string (str[]), trả về XÂU được GHÉP bởi LẦN LƯỢT tất cả các string đó.'''
+'''g) Tạo function g có MỘT tham số là MỘT list các string (str[]), trả về string được GHÉP bởi LẦN LƯỢT tất cả các string đó.'''
 
 
 
@@ -59,5 +55,5 @@ h) Tạo class H có:
  
 VD: 
 _id: 1; _name: "Hello, World!", _age: 22
-get_infor trả về: [1, "Hello, World!, 22]
+get_infor trả về: [1, "Hello, World!", 22]
 '''
