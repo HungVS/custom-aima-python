@@ -3,7 +3,7 @@ import importlib
 import inspect
 
 from csp import NQueensCSP
-from utils import Symbol
+from utils import Symbol, expr
 from m_utils import is_true, log_noti
 
 class Marker:
@@ -101,7 +101,15 @@ class Marker:
                 res=s.op=='==>' and s.args[1]==Symbol('C')
                 prob_score+=0.5 if is_true(res) else 0
             except:
-                log_noti(c_id, 'g')    
+                log_noti(c_id, 'g')   
+            try:
+                h=prob_mod.h
+                s=expr("A==>B")
+                op,args=h(s)
+                res=op==s.op and args==s.args
+                prob_score+=0.5 if is_true(res)else 0
+            except:
+                log_noti(c_id,'h')
             
         elif prob_id==3:
             distances=prob_mod.distances
