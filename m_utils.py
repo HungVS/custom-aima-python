@@ -32,4 +32,10 @@ def log_noti(c_id, q_id):
     # print("================================================") 
     # logging.exception("")
     print(f"[CHU Y]: 'Chua' lam hoac lam 'sai' cau {q_id} - Phan {c_id}")
-    # print("================================================") 
+    # print("================================================")
+
+def is_true(x):
+    if not x:
+        raise  Exception("")
+    else:
+        return x
