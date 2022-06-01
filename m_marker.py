@@ -117,7 +117,7 @@ class Marker:
                 prob_score+=0.5 if sorted(prob_mod.all_cities)==['Bacgiang', 'Dienbien', 'Hanoi', 'LaoCai', 'Namdinh', 'Nghean'] else 0
                 prob_score+=0.5 if round(distances["Hanoi"]["Dienbien"])==round(161.55494421403512) and round(distances["Namdinh"]["Bacgiang"])==round(130.38404810405297) else 0
             except AttributeError: 
-                print(f"[CANH BAO]: KHONG DUOC DOI TEN CAC 'BIEN CO SAN'")
+                print(f"[CANH BAO]: KHONG DUOC DOI TEN HOAC XOA CAC 'BIEN CO SAN'")
             except:
                 print(f"[CHU Y]: CH UA LAM HOAC CHUA LAM DUNG YEU CAU DE BAI")
             src=inspect.getsource(prob_mod)
