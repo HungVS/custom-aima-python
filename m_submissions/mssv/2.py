@@ -2,7 +2,7 @@
 PHẦN II: AI CƠ BẢN.
 '''
 
-'''a) Implement program dưới đây.'''
+'''a) Implement program sau:'''
 
 def program(percept):
     """Nhận percept, trả về action tương ứng 
@@ -21,7 +21,8 @@ def program(percept):
     
     
     
-'''b) Khởi tạo đối tượng node thuộc kiểu Node đại diện cho state 'Hanoi'''''
+'''b) Khởi tạo đối tượng node thuộc kiểu Node đại diện cho state 'Hanoi'
+'''
 
 
 
@@ -51,8 +52,7 @@ from search import exp_schedule
 
 
 
-
-'''e) Khởi tạo biến sd lưu domains của Sudoku problem.'''
+'''e) Khởi tạo biến sd lưu domain của Sudoku problem. (Domain là các số NGUYÊN từ 1 đến 9) '''
 
 
 
@@ -67,7 +67,7 @@ from search import exp_schedule
 
 
 
-'''g) Khởi tạo biến s thuộc kiểu Expr đại diện cho sentence dưới đây: 
+'''g) Khởi tạo  đối tượng s thuộc kiểu Expr đại diện cho sentence sau: 
 A & ~B ==> C
 '''
 from logic import expr
@@ -75,14 +75,20 @@ from logic import expr
 
 
 
-'''h) Khởi tạo đối tượng kb thuộc kiểu PropKB chứa các sentence sau:
+'''h) Implement function h sau:'''
+def h(sentence):
+    """Nhận sentence, trả về operator và arguments tương ứng 
 
-'''
-from logic import PropKB
+    Parameters
+    ----------
+    sentence: Expr
+        Logical sentence.
 
-
-
-
+    Returns
+    -------
+    (str, tuple)
+        (operator, arguments)
+    """
     
     
     
